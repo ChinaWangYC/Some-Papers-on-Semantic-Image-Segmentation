@@ -1,0 +1,37 @@
+1.Semantic image segmentation using oriented pattern analysis使用定向模式分析的语义图像分割
+只能分割天空、树叶、建筑三种特定目标。先用传统JSEG方法进行分割，此方法会产生过分割，再计算每个像素点的方向相干性进行小区域合并。
+
+2.Semantic Image Segmentation with Contextual Hierarchical Models基于情景层次模型的图像语义分割
+将输入图像进行滤波/采样得到多幅不同侧重的中间图像，这些中间图片就是情景context。
+不使用任何预设或例子，可以应用于不同问题而不需要做修改，训练代价比CNN小。
+
+3.Semantic image segmentation via guidance of image classification通过图像分类指导进行语义图像分割
+该模型基于一个深度学习框架，由FCN完全卷积网络和CNN两部分组成，分别描述局部感知和全局场景理解，并用全局特征预测局部的归属。
+
+4.Semantic segmentation of RGBD images based on deep depth regression
+提取图像景深depth的一种方法，并把景深也作为一维信息进行处理。
+
+5.Fast semantic segmentation of aerial images based on color and texture基于颜色和纹理的航拍图像快速语义分割
+航拍图像，把像素采样为超像素，节约计算资源，所以训练快。给超像素标定label，用LBP傅里叶特征描述纹理，用KNN分类，识别率95%
+
+6.Multimodality semantic segmentation based on polarization and color images基于偏振和彩色图像的多模态语义分割
+利用偏振成像技术对多种光照条件下的图像进行修正，从而提高分割准确率。
+引文[4][6]中提到了一些比较好的超像素生成方法,如TurboPixel[6]、 SLIC超像素[4]等。
+
+7.LSI_ Latent semantic inference for natural image segmentation LSI_用于自然图像分割的潜在语义推断
+类似于使用超像素进行图像分解，但超像素只是把相邻的相似像素聚类成小区域，使用LSI框架后可以把不相邻的像素标定相同label
+
+8.Semantic segmentation of images exploiting DCT based features and random forest利用基于离散余弦变换的特征和随机森林对图像进行语义分割
+不仅提取像素差异而产生的简单纹理，还利用DCT提取频域中表示的复杂纹理。
+ Gray-level occurrence matrices(GLCMs) [5], Gabor Filter [6], and Local Binary Pattern (LBP) [7]是提取纹理特征的常见方法
+
+9.Webly Supervised Semantic Segmentation弱监督的学习方法，大量收集网络上的图像进行学习
+
+10.Semantic Conditional Random Field for Object Based SAR Image Segmentation用于基于对象的雷达图像分割的语义条件随机场
+先将图像处理为聚合、结构、同构的子图像，再用设计的三种核函数分别提取不同的上下文约束，继而通过训练和推理进行分割。
+
+11.Compression-based semantic-sensitive image segmentation_ PRDC-SSIS基于压缩的语义敏感图像分割：PRDC-SSIS
+先将图片密铺分割为固定大小的方形patch，再应用最小生成树、k-means、图、获取的patch特征向量空间对patch进行分类。分类后的区域边缘仍是原patch的边缘，并不平滑。
+
+
+
